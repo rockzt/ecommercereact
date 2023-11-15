@@ -1,16 +1,15 @@
 import Navegationbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
-
   return (
     <>
       <div>
-          <Navegationbar/>
+        <Navegationbar />
       </div>
-        <br/>
+      <br />
       <h3 className="text-title text-center">Welcome to computech</h3>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
