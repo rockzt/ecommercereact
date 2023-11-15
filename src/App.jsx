@@ -1,13 +1,14 @@
-import Navbar from './components/Navbar/Navbar'
+import Navegationbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
 
   return (
     <>
       <div>
-          <Navbar/>
+          <Navegationbar/>
       </div>
-      <h1 className="text-title">Comision 49900 Coderhouse</h1>
+        <br/>
+      <h3 className="text-title text-center">Welcome to computech</h3>
     </>
   )
 }
