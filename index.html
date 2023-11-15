@@ -9,5 +9,70 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      //Operación Ternaria
+      console.log(true ? 'verdadero' : 'false');
+
+      //Copiando Valores
+      const nums1 = [1,2,3,4];
+      const nums2 = [...nums1, 5];
+      console.log(nums2);
+
+      //Mutating complex objects, string spread
+      const persona =  {
+        nombre: 'Sebastian',
+        edad: 29
+      }
+
+      const persona2 = {
+        ...persona,
+        nombre: 'Matias',
+      }
+
+      persona.nombre = 'Rock';
+
+      console.log(persona);
+      console.log(persona2);
+
+
+      //Deep Matching advanced (objects destructuring)
+      const person1 =  {
+        nombre: 'Rock',
+        edad: 27
+      }
+      const person2 =  {
+        nombre: 'Rito',
+        edad: 25
+      }
+
+      const {nombre: nombrePerson1} = person1
+      const {edad: edadPerson1} = person1
+
+      const {nombre: nombrePerson2} = person2
+      const {edad: edadPerson2} = person2
+
+      console.log(nombrePerson1)
+      console.log(edadPerson1)
+      console.log(nombrePerson2)
+      console.log(edadPerson2)
+
+
+      //Destructuring  by position
+      const nums22 = [19,29,33,44];
+      const [edadRock, edadRito] = nums22;
+      console.log(edadRito);
+      console.log(edadRock);
+
+      //Retrocompatibility Polyfill
+      Number.prototype.mutiplicar = function (number){
+        return number * this //this is num1, accesing the owner values
+      }
+      const num1 = 5;
+      const result = num1.mutiplicar(10)
+      console.log(result)
+
+      //
+
+    </script>
   </body>
 </html>

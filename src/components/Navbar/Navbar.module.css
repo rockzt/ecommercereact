@@ -1,0 +1,16 @@
+.colorRed{
+    color: red;
+}
+
+.container {
+    display: flex;
+    background-color: #1a1a1a;
+    justify-content: space-around;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items:center;
+}
