@@ -1,16 +1,25 @@
-.colorRed{
-    color: red;
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.container {
-    display: flex;
-    background-color: #1a1a1a;
-    justify-content: space-around;
+.fadeOut {
+    animation: fadeOut 0.5s ease-in-out;
 }
 
-.categories{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    align-items:center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
