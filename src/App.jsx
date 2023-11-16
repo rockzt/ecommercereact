@@ -5,18 +5,18 @@ function App() {
   return (
     <>
       <div>
-          <Navegationbar/>
+        <Navegationbar />
       </div>
-        <br/>
-        <div>
-            <CategoriesData/>
-        </div>
-        <br/>
-        <div>
-            <ItemList/>
-        </div>
+      <br />
+      <div>
+        <CategoriesData />
+      </div>
+      <br />
+      <div>
+        <ItemList />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
