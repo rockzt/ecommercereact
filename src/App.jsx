@@ -1,14 +1,20 @@
 import Navegationbar from "./components/Navbar/Navbar.jsx";
-
+import ItemList from "./components/ItemListContainer/ItemListContainer.jsx";
+import CategoriesData from "./components/CategoriesData/CategoriesData.jsx";
 function App() {
-
   return (
     <>
       <div>
           <Navegationbar/>
       </div>
         <br/>
-      <h3 className="text-title text-center">Welcome to computech</h3>
+        <div>
+            <CategoriesData/>
+        </div>
+        <br/>
+        <div>
+            <ItemList/>
+        </div>
     </>
   )
 }
