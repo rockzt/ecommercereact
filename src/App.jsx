@@ -13,7 +13,7 @@ function App() {
         </div>
         <br/>
         <div>
-            <ItemList/>
+            <ItemList item={'displaying item list'}/>
         </div>
     </>
   )

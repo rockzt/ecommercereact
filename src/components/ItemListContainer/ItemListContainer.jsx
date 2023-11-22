@@ -3,7 +3,7 @@ import styles from './ItemListContainer.module.css';
 import button from "../Button/Button.jsx";
 import Button from "../Button/Button.jsx";
 const ItemList = (props) => {
-    console.log(props)
+    console.log(props.item)
     const [users, setUsers] = useState([
         { id: 1, firstName: 'Frank', lastName: 'Murphy', email: 'frank.murphy@test.com', role: 'User' },
         { id: 2, firstName: 'Vic', lastName: 'Reynolds', email: 'vic.reynolds@test.com', role: 'Admin' },

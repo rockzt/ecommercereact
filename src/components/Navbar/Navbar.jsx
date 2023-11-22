@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CartWidget from "../CartWidget/CartWidget.jsx";
 import classes from './Navbar.module.css'; // Import your CSS module
 
 const Navbar = () => {
@@ -49,6 +50,9 @@ const Navbar = () => {
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    <CartWidget amount={0} />
                 </div>
             </div>
         </nav>
