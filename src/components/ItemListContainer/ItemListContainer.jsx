@@ -19,7 +19,7 @@ const ItemList = (props) => {
                         <div key={user.id} className={styles.card}>
                             <h2 className={styles.cardTitle}>{user.productName}</h2>
                             <p className={styles.cardSubtitle}>{user.category}</p>
-                            <p className={styles.cardText}>{user.qty}</p>
+                            <p className={styles.cardText}><b>Qty:</b>{user.qty}</p>
                             <Button label={'Add To Cart'} color={'blue'} callback={() => console.log(`Adding product ${user.id}`)}/>
                             <p><small>SKU: {user.sku}</small></p>
                         </div>
