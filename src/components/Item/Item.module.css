@@ -1,0 +1,30 @@
+
+.card {
+    flex: 0 0 calc(30% - 20px); /* Adjust the percentage to your liking */
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Apply a different shadow on hover */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}

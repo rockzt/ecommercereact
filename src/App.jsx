@@ -1,5 +1,5 @@
 import Navegationbar from "./components/Navbar/Navbar.jsx";
-import ItemList from "./components/ItemListContainer/ItemListContainer.jsx";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
 import CategoriesData from "./components/CategoriesData/CategoriesData.jsx";
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </div>
         <br/>
         <div>
-            <ItemList item={'displaying item list'}/>
+            <ItemListContainer item={'displaying item list'}/>
         </div>
     </>
   )
