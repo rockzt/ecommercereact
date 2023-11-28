@@ -5,18 +5,18 @@ function App() {
   return (
     <>
       <div>
-          <Navegationbar/>
+        <Navegationbar />
       </div>
-        <br/>
-        <div>
-            <CategoriesData/>
-        </div>
-        <br/>
-        <div>
-            <ItemListContainer item={'displaying item list'}/>
-        </div>
+      <br />
+      <div>
+        <CategoriesData />
+      </div>
+      <br />
+      <div>
+        <ItemListContainer item={"displaying item list"} />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
