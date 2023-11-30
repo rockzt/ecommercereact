@@ -6,21 +6,21 @@ function App() {
   return (
     <>
       <div>
-          <Navegationbar/>
+        <Navegationbar />
       </div>
-        <br/>
-        <div>
-            <CategoriesData/>
-        </div>
-        <br/>
-        <div>
-            <ItemListContainer item={'displaying item list'}/>
-        </div>
-        <div>
-            <MercadoLibre />
-        </div>
+      <br />
+      <div>
+        <CategoriesData />
+      </div>
+      <br />
+      <div>
+        <ItemListContainer item={"displaying item list"} />
+      </div>
+      <div>
+        <MercadoLibre />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
