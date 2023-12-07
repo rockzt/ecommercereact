@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import CartWidget from "../CartWidget/CartWidget.jsx";
 import classes from './Navbar.module.css'; // Import your CSS module
+import {useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    const navigate = useNavigate()
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
     const handleNavCollapse = () => {
@@ -31,22 +33,22 @@ const Navbar = () => {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                Home
+                                <p onClick={() => navigate('/')}>Home</p>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                Shop
+                                <p onClick={() => navigate('/shop')}>Shop</p>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                Services
+                                <p onClick={() => navigate('/categories')}>Categories</p>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                Contact
+                                <p onClick={() => navigate('/contact')}>Contact</p>
                             </a>
                         </li>
                     </ul>

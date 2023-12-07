@@ -15,6 +15,9 @@ const ItemListContainer = ({item}) => {
 
     return (
         <div>
+            <br/>
+            <h1>Recommended Products</h1>
+            <br/>
             <ItemList products={products} />
         </div>
     )
