@@ -3,48 +3,53 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer.
 import CategoriesData from "./components/CategoriesData/CategoriesData.jsx";
 import MercadoLibre from "./components/MercadoLibre/MercadoLibre.jsx";
 import IncrementCount from "./components/IncrementCount/IncrementCount.jsx";
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 function App() {
   return (
     <>
-        <BrowserRouter>
-            {/*Showing always*/}
-            <div>
-                <Navegationbar/>
-            </div>
-            <br/>
-            <br/>
-            {/*Relaying on routes*/}
-            <Routes>
-                <Route path='/' element={<ItemListContainer item={'displaying item list'}/>}/>
-                <Route path='/detail/:productId/' element={<ItemDetailContainer/>}/>
-                <Route path='/*' element={<h1>404 Not Found</h1>}/>
-            </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        {/*Showing always*/}
+        <div>
+          <Navegationbar />
+        </div>
+        <br />
+        <br />
+        {/*Relaying on routes*/}
+        <Routes>
+          <Route
+            path="/"
+            element={<ItemListContainer item={"displaying item list"} />}
+          />
+          <Route path="/detail/:productId/" element={<ItemDetailContainer />} />
+          <Route path="/*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
 
-        <br/>
+      <br />
 
-        <div>
-                <IncrementCount initValue={0} incrementBy={2}>
-                    <h4>Counter Section</h4>
-                </IncrementCount>
-                <IncrementCount initValue={0} incrementBy={2} component={<button>Botón</button>}/>
-        </div>
-        <div>
-
-        </div>
-        <br/>
-        <div>
-            <CategoriesData/>
-        </div>
-        <br/>
-        <div>
-            <MercadoLibre />
-        </div>
-        <br/>
+      <div>
+        <IncrementCount initValue={0} incrementBy={2}>
+          <h4>Counter Section</h4>
+        </IncrementCount>
+        <IncrementCount
+          initValue={0}
+          incrementBy={2}
+          component={<button>Botón</button>}
+        />
+      </div>
+      <div></div>
+      <br />
+      <div>
+        <CategoriesData />
+      </div>
+      <br />
+      <div>
+        <MercadoLibre />
+      </div>
+      <br />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
