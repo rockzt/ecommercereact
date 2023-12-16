@@ -1,18 +1,17 @@
 import {useState} from "react";
 
-const formWithValidationHOC = (WrappedComponent) => {
-    const formWithValidationHOC = (props) => {
-        const {errors, setErrors} = useState({});
+const withFormValidation = (WrappedComponent) => {
 
-        function validateForm() {
+    const WithFormValidation = (props) =>{
+        const [errors, setErrors] = useState({})
+
+        const validateForm = () =>{
             const newErrors = {}
-
-            if (!props.formData.nombre) {
-                newErrors.nombre = 'Name Required'
+            if(!props.formData.nombre){
+                newErrors.nombre = 'El nombre es requerido'
             }
-
-            if (!props.formData.email) {
-                newErrors.email = 'Name Required'
+            if(!props.formData.email){
+                newErrors.nombre = 'El nombre es requerido'
             }
             setErrors(newErrors)
         }
@@ -21,9 +20,59 @@ const formWithValidationHOC = (WrappedComponent) => {
             <WrappedComponent
                 {...props}
                 errors={errors}
-                validateForm={validateForm}
+                validate={validateForm}
             />
-        );
-    };
-    return formWithValidationHOC
+        )
+    }
+    return WithFormValidation
+
+}
+
+const Form = ({formData, errors, validateForm, onChange}) => {
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        validateForm && validateForm()
+    }
+
+    return(
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>Nombre:</label>
+                <input type="text" name="nombre" value={formData.nombre} onChange={(e) => {onChange(e)}}/>
+                {errors && errors.nombre && <div>{errors.nombre}</div>}
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" value={formData.email} onChange={(e) => {onChange(e)}}/>
+                {errors && errors.email && <div>{errors.email}</div>}
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    )
+
+}
+
+
+const FormWithValidation = withFormValidation(Form)
+
+const FormWithValidationHOC = () => {
+    const [formData, setFormData] = useState({
+        nombre: '',
+        email: ''
+    })
+
+    const handleChange = (event) => {
+        setFormData({
+            ...formData,
+        [event.target.name]: event.target.value
+        })
+    }
+
+    return(
+        <div>
+            <FormWithValidation formData={formData} onChange={handleChange}/>
+            <Form formData={formData} onChange={handleChange}/>
+        </div>
+    )
+
 }
