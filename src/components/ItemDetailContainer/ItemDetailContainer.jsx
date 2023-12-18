@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import {getProductById} from "../ItemListContainer/asyncMock.js";
 import Button from "../Button/Button.jsx";
 import styles from "./ItemDetailContainer.module.css";
+import ItemCount from "../ItemCount/ItemCount.jsx";
 
 
 
@@ -26,7 +27,17 @@ const ItemDetailContainer = () => {
                 <p className={styles.quantity}>Quantity: {product?.qty}</p>
                 <p className={styles.sku}>SKU: {product?.sku}</p>
             </div>
+            <ItemCount stock={product?.qty}></ItemCount>
+            {
+                /*
+            <Button label={'-'} callback={() => {console.log(`Product ID: ${productId} added to cart`)}}/>
+            <input type="number"/>
+            <Button label={'+'} callback={() => {console.log(`Product ID: ${productId} added to cart`)}}/>
+            <br/>
             <Button label={'Add to cart'} callback={() => {console.log(`Product ID: ${productId} added to cart`)}}/>
+
+                 */
+            }
         </div>
     )
 }
