@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget/CartWidget.jsx";
 import classes from './Navbar.module.css'; // Import your CSS module
 import {useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({cartCount}) => {
     const navigate = useNavigate()
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -38,23 +38,23 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                <p onClick={() => navigate('/shop')}>Shop</p>
+                                <p onClick={() => navigate('/category/celular')}>Cellphones</p>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                <p onClick={() => navigate('/categories')}>Categories</p>
+                                <p onClick={() => navigate('/category/tablet')}>Tablet</p>
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#" onClick={handleNavCollapse}>
-                                <p onClick={() => navigate('/contact')}>Contact</p>
+                                <p onClick={() => navigate('/category/laptop')}>Laptops</p>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <CartWidget amount={0} />
+                    <CartWidget amount={cartCount} />
                 </div>
             </div>
         </nav>

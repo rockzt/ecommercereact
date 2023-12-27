@@ -28,3 +28,8 @@
     font-size: 0.9rem;
     color: #555;
 }
+
+.cardimg {
+    width: 50%;
+    height: auto;
+}

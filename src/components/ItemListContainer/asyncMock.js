@@ -1,5 +1,5 @@
 const products = [
-    { id: '1', sku: 'P01', productName: 'Republic Of Gamer', category: 'Laptops', qty: 2, img: 'https://via.placeholder.com/100/3498db/ffffff' },
+    { id: '1', sku: 'P01', productName: 'Republic Of Gamer', category: 'Laptops', qty: 0, img: 'https://via.placeholder.com/100/3498db/ffffff' },
     { id: '2', sku: 'P02', productName: '10.5 Samsung', category: 'Tablets', qty: 3, img: 'https://via.placeholder.com/100/e74c3c/ffffff' },
     { id: '3', sku: 'P03', productName: 'Iphone 12 Pro Max', category: 'Cellphones', qty: 4, img: 'https://via.placeholder.com/100/2ecc71/ffffff' },
     { id: '4', sku: 'P04', productName: 'Ergonomic Logitech', category: 'Keyboards', qty: 1, img: 'https://via.placeholder.com/100/3498db/ffffff' },
@@ -12,6 +12,14 @@ export const getProducts = () => {
         setTimeout(() => {
             resolve(products)
         }, 1)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 1000)
     })
 }
 

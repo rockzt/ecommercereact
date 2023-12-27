@@ -14,6 +14,7 @@ const Button = (props) => {
 
 
     //Adding event listener, useEffect executed after component is mounted
+    /*
     useEffect(() => {
         const handleClick = () => { console.log(`Clicking button ${label}`) }
 
@@ -39,7 +40,7 @@ const Button = (props) => {
             button.removeEventListener('click', handleClick)
             window.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+    }, [])*/
 
     /*Passing buttonRef to button component to get button DOM*/
     return (
